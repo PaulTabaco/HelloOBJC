@@ -25,6 +25,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (IBAction)clickBait:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle: @"Ask a question" message: @"Do you like Objective-C?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction  *noAction = [UIAlertAction actionWithTitle:@"No" style: UIAlertActionStyleCancel handler:nil];
+    UIAlertAction  *yesAction = [UIAlertAction actionWithTitle:@"Yes" style: UIAlertActionStyleDefault handler:nil];
+    [alert addAction:noAction];
+    [alert addAction:yesAction];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
 
 @end
